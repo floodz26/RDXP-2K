@@ -99,3 +99,18 @@ Voir roadmap v0.3. Pas avant que Phase 2 soit stable.
 ---
 
 *Dernière mise à jour : 2026-05-15 par Aurore*
+
+---
+
+## Session du 2026-05-15 — Clôture
+
+### Fait cette session
+- [x] Création skill `rdxp` (workflow de session)
+- [x] Push branche `aurore/setup-mvp` sur GitHub
+- [x] Nettoyage repo : exclusion assets binaires MIDI/
+
+### Bloqué sur
+- Rien
+
+### Prochaine étape
+- Créer `proto-py/rd2k_probe.py` (Phase 0 — validation SysEx hardware)
