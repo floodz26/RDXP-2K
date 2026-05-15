@@ -1,0 +1,56 @@
+# === Build artifacts ===
+/build/
+/cmake-build-*/
+/out/
+/.vs/
+/.vscode/
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.exe
+
+# === JUCE ===
+/JUCE/
+/JUCELibraryCode/
+*.jucer
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.env
+venv/
+.venv/
+
+# === Prototype outputs ===
+/proto-py/logs/
+/proto-py/captures/
+*.csv
+*.json
+!docs/**/*.json
+
+# === IDE ===
+.idea/
+*.swp
+*.swo
+*~
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === Secrets ===
+*.key
+*.pem
+secrets/
+
+# === Local research assets (not for repo) ===
+/MIDI/
+*.pdf
+*.pkg
+*.zip
+*.tgz
+*.BIN
