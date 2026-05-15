@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Logs and captured data
+proto-py/logs/
+proto-py/*.csv
+proto-py/*.log
+
+# Build artifacts
+build/
+cmake-build-*/
+*.o
+*.so
+*.dylib
+*.dll
+*.vst3
+*.component
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+.claude/
+
+# JUCE
+plugin/JuceLibraryCode/
+plugin/Builds/
