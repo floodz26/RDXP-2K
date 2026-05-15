@@ -167,17 +167,36 @@ def parse_dt1_response(msg_bytes: List[int]) -> Optional[Tuple[int, List[int]]]:
 def find_rd2000_port(preferred_name: Optional[str] = None) -> Optional[str]:
     """
     Cherche un port MIDI dont le nom contient 'RD-2000'.
+    Accepte aussi les interfaces MIDI DIN (ex: interface Roland UM-ONE,
+    iConnectivity, etc.) si elles transmettent les SysEx.
+    
     Retourne le nom du port ou None.
     """
-    for name in mido.get_input_names():
-        if preferred_name and preferred_name in name:
-            return name
+    inputs = mido.get_input_names()
+    
+    # 1. Recherche exacte par nom préféré
+    if preferred_name:
+        for name in inputs:
+            if preferred_name in name:
+                return name
+    
+    # 2. Recherche RD-2000 en USB
+    for name in inputs:
         if "RD-2000" in name:
             return name
-    # Fallback : chercher Roland
-    for name in mido.get_input_names():
-        if "Roland" in name or "roland" in name.lower():
+    
+    # 3. Recherche interface Roland MIDI DIN
+    for name in inputs:
+        if "Roland" in name or "UM-ONE" in name or "UMONE" in name:
             return name
+    
+    # 4. Recherche générique Roland (insensible casse)
+    for name in inputs:
+        if "roland" in name.lower():
+            return name
+    
+    # 5. Interface MIDI DIN générique (iConnectivity, M-Audio, etc.)
+    # L'utilisateur peut spécifier manuellement avec --port
     return None
 
 
