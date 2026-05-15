@@ -108,9 +108,14 @@ Voir roadmap v0.3. Pas avant que Phase 2 soit stable.
 - [x] Création skill `rdxp` (workflow de session)
 - [x] Push branche `aurore/setup-mvp` sur GitHub
 - [x] Nettoyage repo : exclusion assets binaires MIDI/
+- [x] Création `proto-py/rd2k_probe.py` — prototype validation SysEx
+- [x] Création `proto-py/README.md` — mode d'emploi complet
+- [x] Push Phase 0 sur GitHub
 
 ### Bloqué sur
 - Rien
 
 ### Prochaine étape
-- Créer `proto-py/rd2k_probe.py` (Phase 0 — validation SysEx hardware)
+- Flo teste `rd2k_probe.py` sur hardware réel (RD-2000 branché)
+- Décision Go/No-Go en fonction des résultats
+- Si GO : passer à Phase 1 (Core JUCE)
